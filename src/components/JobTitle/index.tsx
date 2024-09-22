@@ -48,7 +48,7 @@ const JobTitle = ({
       </Stack>
 
       <Stack direction="row" alignItems="center" justifyContent="space-between">
-        <Stack direction="row" gap={1} alignItems="center">
+        <Stack direction="row" gap={1} alignItems="center" sx={style.date}>
           <CalendarMonthIcon />
           {startDate.toLocaleString(locale, { month: 'long' })} {startDate.getFullYear()} -{' '}
           {endDate ? (

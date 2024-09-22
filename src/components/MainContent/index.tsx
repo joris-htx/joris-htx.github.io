@@ -1,12 +1,13 @@
 import { Box, Stack } from '@mui/material'
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 import style from './style'
 import Diploma from '../Diploma'
 import JobTitle from '../JobTitle'
 
 const MainContent = () => {
+  const intl = useIntl()
   return (
     <Box sx={style.mainContentContainer}>
       <Box component="h1">Joris Harnetiaux</Box>
@@ -35,7 +36,7 @@ const MainContent = () => {
             company="Ricardo"
             companyLogoSrc="resources/ricardo.png"
             location="Valbonne, France"
-            startDate={new Date(2019, 7)}
+            startDate={new Date(2019, 6)}
           />
 
           <JobTitle
@@ -44,8 +45,8 @@ const MainContent = () => {
             companyLogoSrc="resources/crossknowledge.png"
             logoWidth={160}
             location="Valbonne, France"
-            startDate={new Date(2015, 5)}
-            endDate={new Date(2019, 7)}
+            startDate={new Date(2015, 4)}
+            endDate={new Date(2019, 6)}
           />
 
           <JobTitle
@@ -54,8 +55,8 @@ const MainContent = () => {
             companyLogoSrc="resources/ausy.png"
             logoWidth={80}
             location="Sophia Antipolis, France"
-            startDate={new Date(2014, 10)}
-            endDate={new Date(2015, 5)}
+            startDate={new Date(2014, 9)}
+            endDate={new Date(2015, 4)}
           />
 
           <JobTitle
@@ -63,8 +64,8 @@ const MainContent = () => {
             company="Air France"
             companyLogoSrc="resources/airfrance.png"
             location="Sophia Antipolis, France"
-            startDate={new Date(2013, 9)}
-            endDate={new Date(2014, 10)}
+            startDate={new Date(2013, 8)}
+            endDate={new Date(2014, 9)}
           />
 
           <JobTitle
@@ -72,8 +73,8 @@ const MainContent = () => {
             company="Supralog"
             companyLogoSrc="resources/supralog.png"
             location="Antibes, France"
-            startDate={new Date(2013, 6)}
-            endDate={new Date(2013, 8)}
+            startDate={new Date(2013, 5)}
+            endDate={new Date(2013, 7)}
           />
 
           <JobTitle
@@ -81,8 +82,8 @@ const MainContent = () => {
             company="OverLink"
             companyLogoSrc="resources/overlink.png"
             location="Sophia Antipolis, France"
-            startDate={new Date(2011, 4)}
-            endDate={new Date(2011, 6)}
+            startDate={new Date(2011, 3)}
+            endDate={new Date(2011, 5)}
           />
         </Stack>
       </Box>
@@ -92,14 +93,51 @@ const MainContent = () => {
           <FormattedMessage id="MainContent.Education" defaultMessage="Education" />
         </Box>
 
-        <Diploma
-          title="Engineer in Computer Science"
-          subtitles={['Specialization software architecture']}
-          schoolName="Polytech' Nice Sophia"
-          startDate={new Date(2011, 9)}
-          endDate={new Date(2014, 9)}
-          location="Sophia Antipolis, France"
-        />
+        <Stack direction="column" gap={3}>
+          <Diploma
+            title={intl.formatMessage({
+              id: 'MainContent.Diploma.Engineer',
+              defaultMessage: 'Computer science engineering degree',
+            })}
+            subtitles={['Specialization software architecture']}
+            schoolName="Polytech' Nice Sophia"
+            startDate={new Date(2011, 8)}
+            endDate={new Date(2014, 6)}
+            location="Sophia Antipolis, France"
+          />
+          <Diploma
+            title={intl.formatMessage({
+              id: 'MainContent.Diploma.Master',
+              defaultMessage: 'Master of Computer Science',
+            })}
+            subtitles={['Apprenticeship']}
+            schoolName="Polytech' Nice Sophia"
+            startDate={new Date(2013, 8)}
+            endDate={new Date(2014, 9)}
+            location="Sophia Antipolis, France"
+          />
+          <Diploma
+            title={intl.formatMessage({
+              id: 'MainContent.Diploma.DUT',
+              defaultMessage: 'Two-year university degree (DUT)',
+            })}
+            subtitles={['Computer science']}
+            schoolName="Université de Nice Sophia Antipolis"
+            startDate={new Date(2009, 8)}
+            endDate={new Date(2011, 6)}
+            location="Nice, France"
+          />
+          <Diploma
+            title={intl.formatMessage({
+              id: 'MainContent.Diploma.Baccalaureate',
+              defaultMessage: 'Scientific baccalaureate',
+            })}
+            subtitles={['Specialization in engineering sciences']}
+            schoolName="Lycée général et technologique de Lorgues"
+            startDate={new Date(2009, 6)}
+            location="Lorgues, France"
+          />
+        </Stack>
       </Box>
     </Box>
   )
