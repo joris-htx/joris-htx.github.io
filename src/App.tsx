@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import CV from './components/CV'
+import Layout from './components/Layout'
+import { IntlProvider } from 'react-intl'
+import messagesInFrench from './translations/fr.json'
+import { Box } from '@mui/material'
+import { useLocale } from './hooks'
 
-function App() {
+const App = () => {
+  const locale = useLocale()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Box sx={{ background: '#EEE' }}>
+      <IntlProvider
+        messages={locale === 'fr' ? messagesInFrench : {}}
+        locale="locale"
+        defaultLocale="en"
+      >
+        <Layout>
+          <CV />
+        </Layout>
+      </IntlProvider>
+    </Box>
+  )
 }
 
-export default App;
+export default App
