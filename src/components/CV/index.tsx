@@ -1,6 +1,7 @@
 import { Stack } from '@mui/material'
-import PersonalInfo from '../PersonalInfo'
+
 import MainContent from '../MainContent'
+import PersonalInfo from '../PersonalInfo'
 
 const CV = () => {
   return (

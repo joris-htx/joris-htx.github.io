@@ -1,6 +1,7 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import ReactDOM from 'react-dom/client'
+import { Helmet } from 'react-helmet'
+
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'

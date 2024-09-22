@@ -8,12 +8,10 @@ import PhoneIcon from '@mui/icons-material/Phone'
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf'
 import SpaIcon from '@mui/icons-material/Spa'
 import { Avatar, Box, Link, Stack } from '@mui/material'
-
 import { FormattedMessage, useIntl } from 'react-intl'
 
 import IconItem from '../IconItem'
 import RankingBar from '../RankingBar'
-
 import FranceFlagIcon from './resources/france-flag-icon.svg'
 import JavascriptIcon from './resources/javascript.svg'
 import PSMIcon from './resources/psm1.svg'

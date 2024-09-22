@@ -1,5 +1,6 @@
 import { Box, LinearProgress, Stack } from '@mui/material'
 import React from 'react'
+
 import IconItem from '../IconItem'
 import style from './style'
 
@@ -12,7 +13,7 @@ type Props = {
 const RankingBar = ({ title = '', value, iconSrc }: Props) => {
   return (
     <Stack direction="row" gap={1} alignItems="center" flexGrow="1">
-      {!!iconSrc ? (
+      {iconSrc ? (
         <IconItem
           icon={<Box component="img" src={iconSrc} alt="" width={24} />}
           text={title}
