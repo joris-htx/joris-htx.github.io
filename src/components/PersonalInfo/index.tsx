@@ -96,7 +96,7 @@ const PersonalInfo = () => {
           <Stack direction="row" gap={1} alignItems="center" justifyContent="space-between">
             <IconItem
               icon={<Box component="img" src={ReactIcon} alt="" width={20} />}
-              text="Epic React (2020)"
+              text="Epic React (2021)"
             />
             <Link href="https://www.epicreact.dev/" target="_blank" sx={style.iconLink}>
               <OpenInNewIcon />
