@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f855e6bc.css",
+    "main.js": "/static/js/main.cbfac9f5.js",
+    "static/js/453.151a06fb.chunk.js": "/static/js/453.151a06fb.chunk.js",
+    "static/media/psm1.svg": "/static/media/psm1.bb25395460f54eec8d69d230f2410e21.svg",
+    "static/media/react.svg": "/static/media/react.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/united-kingdom-flag-icon.svg": "/static/media/united-kingdom-flag-icon.8411a74a2d01099b9cd827dcba16a600.svg",
+    "static/media/javascript.svg": "/static/media/javascript.acc4642f682cd93a4c20a8a02c0cfa21.svg",
+    "index.html": "/index.html",
+    "static/media/france-flag-icon.svg": "/static/media/france-flag-icon.bb9ca6102ad27276981f84b4eca3f85b.svg",
+    "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
+    "main.cbfac9f5.js.map": "/static/js/main.cbfac9f5.js.map",
+    "453.151a06fb.chunk.js.map": "/static/js/453.151a06fb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.cbfac9f5.js"
+  ]
+}
