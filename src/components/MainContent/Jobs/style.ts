@@ -1,12 +1,11 @@
 import { SxProps } from '@mui/material'
 
 const style = {
-  mainContentContainer: {
-    height: '100%',
-    p: 2,
+  list: {
+    padding: 0,
   },
-  divider: {
-    marginTop: 3,
+  listItem: {
+    py: 0,
   },
 } satisfies SxProps
 
