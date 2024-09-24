@@ -33,7 +33,12 @@ const MainContent = () => {
         <Stack direction="column" gap={3}>
           <Stack direction="column" gap={1}>
             <JobTitle
-              titles={['Senior Frontend Developer']}
+              titles={[
+                intl.formatMessage({
+                  id: 'JobTitle.SeniorFrontEnd',
+                  defaultMessage: 'Senior Frontend Engineer',
+                }),
+              ]}
               company="Ricardo"
               companyLogoSrc="resources/ricardo.png"
               location="Valbonne, France"
@@ -115,7 +120,13 @@ const MainContent = () => {
 
           <Stack direction="column" gap={1}>
             <JobTitle
-              titles={['Scrum master', 'Senior Full stack Developer']}
+              titles={[
+                'Scrum master',
+                intl.formatMessage({
+                  id: 'JobTitle.SeniorFullStack',
+                  defaultMessage: 'Senior Full stack Developer',
+                }),
+              ]}
               company="CrossKnowledge"
               companyLogoSrc="resources/crossknowledge.png"
               logoWidth={160}
@@ -208,7 +219,12 @@ const MainContent = () => {
 
           <Stack direction="column" gap={1}>
             <JobTitle
-              titles={['Full stack Developer']}
+              titles={[
+                intl.formatMessage({
+                  id: 'JobTitle.FullStack',
+                  defaultMessage: 'Full stack Developer',
+                }),
+              ]}
               company="AUSY"
               companyLogoSrc="resources/ausy.png"
               logoWidth={80}
@@ -217,14 +233,19 @@ const MainContent = () => {
               endDate={new Date(2015, 4)}
             />
             <FormattedMessage
-              id="Job.Description.AUSY"
+              id="Job.Description.Ausy"
               defaultMessage="Contracted by CrossKnowledge for 6 months. Then hired by the company."
             />
           </Stack>
 
           <Stack direction="column" gap={1}>
             <JobTitle
-              titles={['Full stack Developer - Apprentice']}
+              titles={[
+                intl.formatMessage({
+                  id: 'JobTitle.FullStackApprentice',
+                  defaultMessage: 'Full stack Developer - Apprentice',
+                }),
+              ]}
               company="Air France"
               companyLogoSrc="resources/airfrance.png"
               location="Sophia Antipolis, France"
@@ -233,7 +254,7 @@ const MainContent = () => {
             />
             <FormattedMessage
               id="Job.Description.AirFrance"
-              defaultMessage="Within the DGSI at Air France, in the department responsible for airport applications used by ground staff. In charge of technical migrations and database optimizations with the goal of reducing technical debt, lowering maintenance costs, and improving performance."
+              defaultMessage="Within the DGSI at Air France, responsible for technical migrations and database optimizations for airport applications used by ground staff. Main objectives: reducing technical debt, optimizing maintenance costs, and improving overall performance."
             />
 
             <Box component="h5" marginBottom={1}>
@@ -258,14 +279,11 @@ const MainContent = () => {
                   secondary={
                     <>
                       <FormattedMessage
-                        id="Job.AirFrance.KeyAchievement1.Details1"
+                        id="Job.AirFrance.KeyAchievement1.Details"
                         defaultMessage="Migration from Java 4 to Java 7, Tomcat 7 migration"
                       />
                       <br />
-                      <FormattedMessage
-                        id="Job.AirFrance.KeyAchievement1.Details2"
-                        defaultMessage="Maven, Spring, Hibernate"
-                      />
+                      Maven, Spring, Hibernate
                     </>
                   }
                 />
@@ -314,7 +332,12 @@ const MainContent = () => {
 
           <Stack direction="column" gap={1}>
             <JobTitle
-              titles={['Backend developer - Intern']}
+              titles={[
+                intl.formatMessage({
+                  id: 'JobTitle.BackendIntern',
+                  defaultMessage: 'Backend developer - Intern',
+                }),
+              ]}
               company="Supralog"
               companyLogoSrc="resources/supralog.png"
               location="Antibes, France"
@@ -330,7 +353,12 @@ const MainContent = () => {
 
           <Stack direction="column" gap={1}>
             <JobTitle
-              titles={['Full stack developer - Intern']}
+              titles={[
+                intl.formatMessage({
+                  id: 'JobTitle.FullStackIntern',
+                  defaultMessage: 'Full stack developer - Intern',
+                }),
+              ]}
               company="OverLink"
               companyLogoSrc="resources/overlink.png"
               location="Sophia Antipolis, France"
@@ -359,7 +387,12 @@ const MainContent = () => {
               id: 'MainContent.Diploma.Engineer',
               defaultMessage: 'Computer science engineering degree',
             })}
-            subtitles={['Specialization software architecture']}
+            subtitles={[
+              intl.formatMessage({
+                id: 'MainContent.Diploma.Engineer.Description',
+                defaultMessage: 'Specialization software architecture',
+              }),
+            ]}
             schoolName="Polytech' Nice Sophia"
             startDate={new Date(2011, 8)}
             endDate={new Date(2014, 6)}
@@ -371,7 +404,12 @@ const MainContent = () => {
               id: 'MainContent.Diploma.Master',
               defaultMessage: 'Master of Computer Science',
             })}
-            subtitles={['Apprenticeship']}
+            subtitles={[
+              intl.formatMessage({
+                id: 'MainContent.Diploma.Master.Description',
+                defaultMessage: 'Apprenticeship',
+              }),
+            ]}
             schoolName="Polytech' Nice Sophia"
             startDate={new Date(2013, 8)}
             endDate={new Date(2014, 9)}
@@ -381,9 +419,9 @@ const MainContent = () => {
           <Diploma
             title={intl.formatMessage({
               id: 'MainContent.Diploma.DUT',
-              defaultMessage: 'Two-year university degree (DUT)',
+              defaultMessage: 'Two-year university degree (DUT) in computer science',
             })}
-            subtitles={['Computer science']}
+            subtitles={[]}
             schoolName="Université de Nice Sophia Antipolis"
             startDate={new Date(2009, 8)}
             endDate={new Date(2011, 6)}
@@ -395,7 +433,12 @@ const MainContent = () => {
               id: 'MainContent.Diploma.Baccalaureate',
               defaultMessage: 'Scientific baccalaureate',
             })}
-            subtitles={['Specialization in engineering sciences']}
+            subtitles={[
+              intl.formatMessage({
+                id: 'MainContent.Diploma.Baccalaureate.Description',
+                defaultMessage: 'Specialization in engineering sciences',
+              }),
+            ]}
             schoolName="Lycée général et technologique de Lorgues"
             startDate={new Date(2009, 6)}
             location="Lorgues, France"
