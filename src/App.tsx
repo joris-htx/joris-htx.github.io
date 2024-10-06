@@ -3,6 +3,7 @@ import { Box } from '@mui/material'
 import { IntlProvider } from 'react-intl'
 
 import CV from './components/CV'
+// import Header from './components/Header'
 import Layout from './components/Layout'
 import { useLocale } from './hooks'
 import messagesInFrench from './translations/fr.json'

@@ -1,13 +1,19 @@
-import { SxProps } from '@mui/material'
+import { SxProps, Theme } from '@mui/material'
 
-const style = {
-  mainContentContainer: {
-    height: '100%',
-    p: 2,
-  },
-  divider: {
-    marginTop: 3,
-  },
-} satisfies SxProps
+const useStyle = (theme: Theme) =>
+  ({
+    mainContentContainer: {
+      height: '100%',
+      marginLeft: 4,
+      p: 2,
 
-export default style
+      [theme.breakpoints.up('md')]: {
+        marginLeft: 0,
+      },
+    },
+    divider: {
+      marginTop: 3,
+    },
+  }) satisfies SxProps
+
+export default useStyle

@@ -21,7 +21,6 @@ const Diplomas = () => {
         schoolName="Polytech' Nice Sophia"
         startDate={new Date(2011, 8)}
         endDate={new Date(2014, 6)}
-        location="Sophia Antipolis, France"
       />
 
       <Diploma
@@ -38,7 +37,6 @@ const Diplomas = () => {
         schoolName="Polytech' Nice Sophia"
         startDate={new Date(2013, 8)}
         endDate={new Date(2014, 9)}
-        location="Sophia Antipolis, France"
       />
 
       <Diploma
@@ -50,7 +48,6 @@ const Diplomas = () => {
         schoolName="Université de Nice Sophia Antipolis"
         startDate={new Date(2009, 8)}
         endDate={new Date(2011, 6)}
-        location="Nice, France"
       />
 
       <Diploma
@@ -66,7 +63,6 @@ const Diplomas = () => {
         ]}
         schoolName="Lycée général et technologique de Lorgues"
         startDate={new Date(2009, 6)}
-        location="Lorgues, France"
       />
     </Stack>
   )

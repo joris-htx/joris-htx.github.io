@@ -1,12 +1,15 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-import { Box, List, ListItem, ListItemIcon, ListItemText, Stack } from '@mui/material'
+import { Box, List, ListItem, ListItemIcon, ListItemText, Stack, useTheme } from '@mui/material'
 import { FormattedMessage, useIntl } from 'react-intl'
 
-import style from './style'
+import useStyle from './style'
 import JobTitle from '../../JobTitle'
 
 const Jobs = () => {
   const intl = useIntl()
+  const theme = useTheme()
+  const style = useStyle(theme)
+
   return (
     <Stack direction="column" gap={3}>
       <Stack direction="column" gap={1}>
@@ -33,7 +36,7 @@ const Jobs = () => {
 
         <List sx={style.list}>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText
@@ -52,7 +55,7 @@ const Jobs = () => {
             />
           </ListItem>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText
@@ -65,7 +68,7 @@ const Jobs = () => {
             />
           </ListItem>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText
@@ -78,7 +81,7 @@ const Jobs = () => {
             />
           </ListItem>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText
@@ -118,7 +121,7 @@ const Jobs = () => {
         </Box>
         <List sx={style.list}>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText
@@ -137,7 +140,7 @@ const Jobs = () => {
             />
           </ListItem>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText
@@ -148,7 +151,7 @@ const Jobs = () => {
             />
           </ListItem>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText
@@ -174,7 +177,7 @@ const Jobs = () => {
             />
           </ListItem>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText
@@ -235,7 +238,7 @@ const Jobs = () => {
 
         <List sx={style.list}>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText
@@ -258,7 +261,7 @@ const Jobs = () => {
             />
           </ListItem>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText
@@ -284,7 +287,7 @@ const Jobs = () => {
             />
           </ListItem>
           <ListItem sx={style.listItem}>
-            <ListItemIcon>
+            <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon />
             </ListItemIcon>
             <ListItemText

@@ -1,9 +1,9 @@
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
-import { Box, Stack } from '@mui/material'
+import { Box, Stack, useTheme } from '@mui/material'
 import { FormattedMessage } from 'react-intl'
 
-import style from './style'
+import useStyle from './style'
 import { useLocale } from '../../hooks'
 
 type Props = {
@@ -26,10 +26,12 @@ const JobTitle = ({
   logoWidth = 120,
 }: Props) => {
   const locale = useLocale()
+  const theme = useTheme()
+  const style = useStyle(theme)
 
   return (
     <Stack direction="column" position="relative">
-      <Stack direction="row" alignItems="center" justifyContent="space-between">
+      <Box sx={style.itemWrapper({ reverse: true })}>
         <Stack direction="column" alignItems="flex-start" marginBottom={1}>
           {titles.map((title) => (
             <Box sx={style.jobTitle} key={title}>
@@ -42,12 +44,11 @@ const JobTitle = ({
           src={companyLogoSrc}
           alt={company}
           width={logoWidth}
-          position="absolute"
-          right={0}
+          sx={style.companyLogo}
         />
-      </Stack>
+      </Box>
 
-      <Stack direction="row" alignItems="center" justifyContent="space-between">
+      <Box sx={style.itemWrapper({ reverse: false })}>
         <Stack direction="row" gap={1} alignItems="center" sx={style.date}>
           <CalendarMonthIcon />
           {startDate.toLocaleString(locale, { month: 'long' })} {startDate.getFullYear()} -{' '}
@@ -61,7 +62,7 @@ const JobTitle = ({
           <LocationOnIcon />
           {location}
         </Stack>
-      </Stack>
+      </Box>
     </Stack>
   )
 }

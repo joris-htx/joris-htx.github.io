@@ -1,8 +1,8 @@
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
-import { Box, Stack } from '@mui/material'
+import { Box, Stack, useTheme } from '@mui/material'
 
-import style from './style'
+import useStyle from './style'
 import { useLocale } from '../../hooks'
 
 type Props = {
@@ -11,14 +11,15 @@ type Props = {
   schoolName: string
   startDate: Date
   endDate?: Date
-  location: string
 }
 
-const Diploma = ({ title, subtitles, schoolName, startDate, endDate, location }: Props) => {
+const Diploma = ({ title, subtitles, schoolName, startDate, endDate }: Props) => {
   const locale = useLocale()
+  const theme = useTheme()
+  const style = useStyle(theme)
 
   return (
-    <Stack direction="row" alignItems="stretch" justifyContent="space-between">
+    <Box sx={style.diplomaWrapper}>
       <Stack direction="column" alignItems="flex-start">
         <Box sx={style.title}>{title}</Box>
         {subtitles.map((subtitle) => (
@@ -34,14 +35,13 @@ const Diploma = ({ title, subtitles, schoolName, startDate, endDate, location }:
         </Stack>
       </Stack>
 
-      <Stack direction="column" alignItems="end" justifyContent="space-between">
-        <Box sx={style.title}>{schoolName}</Box>
+      <Stack direction="column" alignItems="end" justifyContent="end">
         <Stack direction="row" gap={1} alignItems="center">
           <LocationOnIcon />
-          {location}
+          {schoolName}
         </Stack>
       </Stack>
-    </Stack>
+    </Box>
   )
 }
 
