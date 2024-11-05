@@ -29,9 +29,9 @@ const Diploma = ({ title, subtitles, schoolName, startDate, endDate }: Props) =>
         ))}
         <Stack direction="row" gap={1} alignItems="center" sx={style.date}>
           <CalendarMonthIcon />
-          {startDate.toLocaleString(locale, { month: 'long' })} {startDate.getFullYear()}
+          {startDate.toLocaleString(locale, { month: 'short' })} {startDate.getFullYear()}
           {endDate &&
-            ` - ${endDate.toLocaleString(locale, { month: 'long' })} ${endDate.getFullYear()}`}
+            ` - ${endDate.toLocaleString(locale, { month: 'short' })} ${endDate.getFullYear()}`}
         </Stack>
       </Stack>
 

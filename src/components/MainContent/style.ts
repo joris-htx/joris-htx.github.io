@@ -10,6 +10,13 @@ const useStyle = (theme: Theme) =>
       [theme.breakpoints.up('md')]: {
         marginLeft: 0,
       },
+
+      '@media print': {
+        marginLeft: 0,
+      },
+    },
+    title: {
+      alignItems: 'center',
     },
     divider: {
       marginTop: 3,

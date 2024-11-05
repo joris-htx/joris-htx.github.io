@@ -1,9 +1,10 @@
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
 import { Box, Stack, useTheme } from '@mui/material'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 import useStyle from './style'
+import { printDuration } from '../../helpers'
 import { useLocale } from '../../hooks'
 
 type Props = {
@@ -25,6 +26,7 @@ const JobTitle = ({
   endDate,
   logoWidth = 120,
 }: Props) => {
+  const intl = useIntl()
   const locale = useLocale()
   const theme = useTheme()
   const style = useStyle(theme)
@@ -49,14 +51,18 @@ const JobTitle = ({
       </Box>
 
       <Box sx={style.itemWrapper({ reverse: false })}>
-        <Stack direction="row" gap={1} alignItems="center" sx={style.date}>
+        <Stack direction="row" gap={1} alignItems="center">
           <CalendarMonthIcon />
-          {startDate.toLocaleString(locale, { month: 'long' })} {startDate.getFullYear()} -{' '}
-          {endDate ? (
-            `${endDate.toLocaleString(locale, { month: 'long' })} ${endDate.getFullYear()}`
-          ) : (
-            <FormattedMessage id="JobTitle.Current" defaultMessage="Current position" />
-          )}
+          {printDuration({ intl, startDate, endDate })}
+          <Box component="span" sx={style.date}>
+            ({startDate.toLocaleString(locale, { month: 'short' })} {startDate.getFullYear()} -{' '}
+            {endDate ? (
+              `${endDate.toLocaleString(locale, { month: 'short' })} ${endDate.getFullYear()}`
+            ) : (
+              <FormattedMessage id="JobTitle.Current" defaultMessage="Current position" />
+            )}
+            )
+          </Box>
         </Stack>
         <Stack direction="row" gap={1} alignItems="center">
           <LocationOnIcon />

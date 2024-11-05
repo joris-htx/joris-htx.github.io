@@ -11,9 +11,13 @@ const MainContent = () => {
 
   return (
     <Box sx={style.mainContentContainer}>
-      <Box component="h1">Joris Harnetiaux</Box>
-      <Box component="h2">
-        <FormattedMessage id="MainContent.JobTitle" defaultMessage="Senior Frontend Developer" />
+      <Box component="h1" sx={style.title}>
+        Joris Harnetiaux
+        <br />
+        <FormattedMessage
+          id="MainContent.JobTitle"
+          defaultMessage="Senior Frontend Engineer (11 years experience)"
+        />
       </Box>
 
       <Box component="section">

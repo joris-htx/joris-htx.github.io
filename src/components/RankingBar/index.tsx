@@ -15,12 +15,12 @@ const RankingBar = ({ title = '', value, iconSrc }: Props) => {
     <Stack direction="row" gap={1} alignItems="center" flexGrow="1">
       {iconSrc ? (
         <IconItem
-          icon={<Box component="img" src={iconSrc} alt="" width={24} />}
+          icon={<Box component="img" src={iconSrc} alt="" sx={style.icon} />}
           text={title}
           halfWidth
         />
       ) : (
-        <Box sx={{ flexBasis: '50%' }}>{title}</Box>
+        <Box sx={style.label}>{title}</Box>
       )}
       <LinearProgress variant="determinate" value={value} sx={style.rankingBar} />
     </Stack>

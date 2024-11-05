@@ -45,7 +45,7 @@ const Diplomas = () => {
           defaultMessage: 'Two-year university degree (DUT) in computer science',
         })}
         subtitles={[]}
-        schoolName="Université de Nice Sophia Antipolis"
+        schoolName="IUT de Nice"
         startDate={new Date(2009, 8)}
         endDate={new Date(2011, 6)}
       />
@@ -61,7 +61,7 @@ const Diplomas = () => {
             defaultMessage: 'Specialization in engineering sciences',
           }),
         ]}
-        schoolName="Lycée général et technologique de Lorgues"
+        schoolName="Lycée de Lorgues"
         startDate={new Date(2009, 6)}
       />
     </Stack>

@@ -18,6 +18,10 @@ const useStyle = (theme: Theme) =>
       fontSize: 16,
       fontWeight: 700,
       color: '#333',
+
+      '@media print': {
+        fontSize: 13,
+      },
     },
     companyLogo: {
       [theme.breakpoints.up('sm')]: {

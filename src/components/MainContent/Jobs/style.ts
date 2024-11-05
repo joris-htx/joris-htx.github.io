@@ -12,12 +12,31 @@ const style = (theme: Theme) =>
       [theme.breakpoints.up('sm')]: {
         paddingLeft: 2,
       },
+
+      '@media print': {
+        py: 0,
+        paddingLeft: 1,
+      },
     },
     listItemIcon: {
       minWidth: 16,
 
       [theme.breakpoints.up('sm')]: {
         minWidth: 54,
+      },
+
+      '@media print': {
+        minWidth: 16,
+      },
+    },
+    bullet: {
+      '@media print': {
+        fontSize: 12,
+      },
+    },
+    listText: {
+      '@media print': {
+        fontSize: 12,
       },
     },
   }) satisfies SxProps

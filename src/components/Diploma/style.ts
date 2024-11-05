@@ -19,12 +19,21 @@ const useStyle = (theme: Theme) =>
       fontSize: 16,
       fontWeight: 700,
       color: '#333',
+
+      '@media print': {
+        fontSize: 13,
+      },
     },
     subtitle: {
       marginBottom: 1,
       fontSize: 14,
       fontWeight: 700,
       color: '#777',
+
+      '@media print': {
+        fontSize: 12,
+        color: '#777',
+      },
     },
     date: {
       textTransform: 'capitalize',

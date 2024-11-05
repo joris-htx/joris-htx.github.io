@@ -18,6 +18,10 @@ const useStyle = (theme: Theme) =>
       [theme.breakpoints.up('md')]: {
         display: 'none',
       },
+
+      '@media print': {
+        display: 'none',
+      },
     },
     personalInfoContainer: {
       display: 'none',
@@ -27,6 +31,14 @@ const useStyle = (theme: Theme) =>
         flexDirection: 'column',
         borderRadius: '5px',
         p: 2,
+      },
+
+      '@media print': {
+        display: 'flex',
+        flexDirection: 'column',
+        p: 0,
+        maxWidth: 200,
+        borderRight: 'solid 1px #D7D7D7',
       },
     },
   }) satisfies SxProps
