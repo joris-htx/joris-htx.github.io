@@ -1,4 +1,6 @@
 {
+  "Header.Print": "Print",
+  "Header.SavePDF": "Save",
   "Job.AirFrance.KeyAchievement1.Details": "Migration from Java 4 to Java 7, Tomcat 7 migration",
   "Job.AirFrance.KeyAchievement1": "Migrated Air France's salon management application to newest technical stack",
   "Job.AirFrance.KeyAchievement2.Details1": "Index purge & optimization",

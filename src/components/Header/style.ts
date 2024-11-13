@@ -42,6 +42,14 @@ const style = (theme: Theme) =>
         width: 240,
       },
     },
+    button: {
+      color: '#fff',
+      display: 'none',
+
+      [theme.breakpoints.up('sm')]: {
+        display: 'inline-flex',
+      },
+    },
     switch: {
       '& .MuiSwitch-root': {
         width: 62,

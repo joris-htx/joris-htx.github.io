@@ -51,7 +51,7 @@ const JobTitle = ({
       </Box>
 
       <Box sx={style.itemWrapper({ reverse: false })}>
-        <Stack direction="row" gap={1} alignItems="center">
+        <Stack direction="row" gap={1} alignItems="center" textAlign="left">
           <CalendarMonthIcon />
           {printDuration({ intl, startDate, endDate })}
           <Box component="span" sx={style.date}>

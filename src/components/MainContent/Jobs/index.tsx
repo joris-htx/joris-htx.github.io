@@ -1,5 +1,14 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
-import { Box, List, ListItem, ListItemIcon, ListItemText, Stack, useTheme } from '@mui/material'
+import {
+  Box,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Stack,
+  Typography,
+  useTheme,
+} from '@mui/material'
 import { FormattedMessage, useIntl } from 'react-intl'
 
 import useStyle from './style'
@@ -31,9 +40,9 @@ const Jobs = () => {
           id="Job.Description.Ricardo"
           defaultMessage="Contributing to the development and optimization of the Ricardo platform, the leader in second-hand marketplaces in Switzerland. Working on key features in post-sales management, item listing and buying experience. I leverage modern technologies, ensuring seamless communication with backend services. I collaborate closely with the product and design to align technical needs with business objectives. Additionally, I have been involved in overhauling internal processes to improve team efficiency."
         />
-        <Box component="h5" marginBottom={1}>
+        <Typography variant="subtitle2" color="primary" marginTop={1}>
           <FormattedMessage id="MainContent.KeyAchievements" defaultMessage="Key achievements" />
-        </Box>
+        </Typography>
 
         <List sx={style.list}>
           <ListItem sx={style.listItem}>
@@ -137,9 +146,9 @@ const Jobs = () => {
           id="Job.Description.CrossKnowledge"
           defaultMessage="Responsible for the development and maintenance of the Learning Management System (LMS) sold by the company. This is a complex web application with an administrator interface and a fully customizable learner interfaces. Working within a SCRUM team, in close collaboration with the QA and IT teams."
         />
-        <Box component="h5" marginBottom={1}>
+        <Typography variant="subtitle2" color="primary" marginTop={1}>
           <FormattedMessage id="MainContent.KeyAchievements" defaultMessage="Key achievements" />
-        </Box>
+        </Typography>
         <List sx={style.list}>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
@@ -265,9 +274,9 @@ const Jobs = () => {
           defaultMessage="Within the DGSI at Air France, responsible for technical migrations and database optimizations for airport applications used by ground staff. Main objectives: reducing technical debt, optimizing maintenance costs, and improving overall performance."
         />
 
-        <Box component="h5" marginBottom={1}>
+        <Typography variant="subtitle2" color="primary" marginTop={1}>
           <FormattedMessage id="MainContent.KeyAchievements" defaultMessage="Key achievements" />
-        </Box>
+        </Typography>
 
         <List sx={style.list}>
           <ListItem sx={style.listItem}>

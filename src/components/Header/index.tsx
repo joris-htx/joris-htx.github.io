@@ -4,6 +4,7 @@ import PrintIcon from '@mui/icons-material/Print'
 import {
   AppBar,
   Box,
+  Button,
   Divider,
   Drawer,
   IconButton,
@@ -50,6 +51,19 @@ const Header = ({ children }: Props) => {
     window.location.replace(`?locale=${newLocale}`)
   }
 
+  const onSaveClick = () => {
+    const fileName = `joris_harnetiaux_${locale.toLocaleUpperCase()}`
+    const pdfUrl = `resources/${fileName}.pdf`
+    const link = document.createElement('a')
+
+    link.href = pdfUrl
+    link.download = fileName
+
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={style.alignCenter}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -58,7 +72,7 @@ const Header = ({ children }: Props) => {
       <Divider />
       <List>
         <ListItem disablePadding>
-          <ListItemButton sx={style.alignCenter}>
+          <ListItemButton sx={style.alignCenter} onClick={window.print}>
             <ListItemIcon>
               <PrintIcon />
             </ListItemIcon>
@@ -67,7 +81,7 @@ const Header = ({ children }: Props) => {
         </ListItem>
 
         <ListItem disablePadding>
-          <ListItemButton sx={style.alignCenter}>
+          <ListItemButton sx={style.alignCenter} onClick={onSaveClick}>
             <ListItemIcon>
               <PictureAsPdfIcon />
             </ListItemIcon>
@@ -100,10 +114,32 @@ const Header = ({ children }: Props) => {
               &nbsp;&nbsp;Harnetiaux
             </Typography>
 
-            <Stack direction="row" spacing={1} alignItems="center">
-              <Box component="img" src={UnitedKingdomFlagIcon} alt="EN" width={24} />
-              <Switch checked={locale === 'fr'} onChange={toggleLocale} sx={style.switch} />
-              <Box component="img" src={FranceFlagIcon} alt="FR" width={24} />
+            <Stack direction="row" gap={2} alignItems="center">
+              <Button
+                startIcon={<PrintIcon />}
+                variant="contained"
+                color="secondary"
+                onClick={window.print}
+                sx={style.button}
+              >
+                <FormattedMessage id="Header.Print" defaultMessage="Print" />
+              </Button>
+
+              <Button
+                startIcon={<PictureAsPdfIcon />}
+                variant="contained"
+                color="secondary"
+                onClick={onSaveClick}
+                sx={style.button}
+              >
+                <FormattedMessage id="Header.SavePDF" defaultMessage="Save as PDF" />
+              </Button>
+
+              <Stack direction="row" spacing={1} alignItems="center">
+                <Box component="img" src={UnitedKingdomFlagIcon} alt="EN" width={24} />
+                <Switch checked={locale === 'fr'} onChange={toggleLocale} sx={style.switch} />
+                <Box component="img" src={FranceFlagIcon} alt="FR" width={24} />
+              </Stack>
             </Stack>
           </Toolbar>
         </AppBar>
