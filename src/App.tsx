@@ -1,11 +1,11 @@
-import './App.css'
-import { Box } from '@mui/material'
+import { Box, ThemeProvider } from '@mui/material'
 import React from 'react'
 import { IntlProvider } from 'react-intl'
 
 import CV from './components/CV'
 import Layout from './components/Layout'
 import { useLocale } from './hooks'
+import { theme } from './theme'
 import messagesInEnglish from './translations/en.json'
 import messagesInFrench from './translations/fr.json'
 
@@ -18,12 +18,14 @@ const App = () => {
     <Box sx={{ background: '#E5E5E5' }}>
       <IntlProvider
         messages={locale === 'fr' ? messagesInFrench : messagesInEnglish}
-        locale="locale"
+        locale={locale}
         defaultLocale="en"
       >
-        <Layout>
-          <CV />
-        </Layout>
+        <ThemeProvider theme={theme}>
+          <Layout>
+            <CV />
+          </Layout>
+        </ThemeProvider>
       </IntlProvider>
     </Box>
   )

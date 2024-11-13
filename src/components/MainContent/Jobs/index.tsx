@@ -11,7 +11,7 @@ const Jobs = () => {
   const style = useStyle(theme)
 
   return (
-    <Stack direction="column" gap={3}>
+    <Stack direction="column" gap={3} textAlign="justify">
       <Stack direction="column" gap={1}>
         <JobTitle
           titles={[
@@ -38,7 +38,7 @@ const Jobs = () => {
         <List sx={style.list}>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
@@ -50,32 +50,28 @@ const Jobs = () => {
                 </Box>
               }
               secondary={
-                <>
-                  <Box sx={style.listText}>
-                    <FormattedMessage
-                      id="Job.Ricardo.KeyAchievement1.Details"
-                      defaultMessage="Payment provider integration (Stripe), Swiss Post integration, improve buying/selling experience, dispute management"
-                    />
-                  </Box>
-                  <Box sx={style.listText}>
-                    <FormattedMessage
-                      id="Job.Ricardo.KeyAchievement1.FEDetails"
-                      defaultMessage="Payment provider integration (Stripe), Swiss Post integration, improve buying/selling experience, dispute management"
-                    />
-                  </Box>
-                  <Box sx={style.listText}>
-                    <FormattedMessage
-                      id="Job.Ricardo.KeyAchievement1.BEDetails"
-                      defaultMessage="Payment provider integration (Stripe), Swiss Post integration, improve buying/selling experience, dispute management"
-                    />
-                  </Box>
-                </>
+                <Box sx={style.listText} component="span">
+                  <FormattedMessage
+                    id="Job.Ricardo.KeyAchievement1.Details"
+                    defaultMessage="Payment provider integration (Stripe), Swiss Post integration, improve buying/selling experience, dispute management"
+                  />
+                  <br />
+                  <FormattedMessage
+                    id="Job.Ricardo.KeyAchievement1.FEDetails"
+                    defaultMessage="Payment provider integration (Stripe), Swiss Post integration, improve buying/selling experience, dispute management"
+                  />
+                  <br />
+                  <FormattedMessage
+                    id="Job.Ricardo.KeyAchievement1.BEDetails"
+                    defaultMessage="Payment provider integration (Stripe), Swiss Post integration, improve buying/selling experience, dispute management"
+                  />
+                </Box>
               }
             />
           </ListItem>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
@@ -90,7 +86,7 @@ const Jobs = () => {
           </ListItem>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
@@ -105,7 +101,7 @@ const Jobs = () => {
           </ListItem>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
@@ -147,7 +143,7 @@ const Jobs = () => {
         <List sx={style.list}>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
@@ -159,7 +155,7 @@ const Jobs = () => {
                 </Box>
               }
               secondary={
-                <Box sx={style.listText}>
+                <Box sx={style.listText} component="span">
                   <FormattedMessage
                     id="Job.CrossKnowledge.KeyAchievement1.Details"
                     defaultMessage="Scrum master of a 8-person team, organized and facilitated the ceremonies, coached the team in Agile principles (1 year)"
@@ -170,14 +166,14 @@ const Jobs = () => {
           </ListItem>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
                 <Box sx={style.listText}>
                   <FormattedMessage
                     id="Job.CrossKnowledge.KeyAchievement2"
-                    defaultMessage="Technical migration from Symfony 2.8 to Symfony 3.4"
+                    defaultMessage="Migrated from Symfony 2.8 to Symfony 3.4"
                   />
                 </Box>
               }
@@ -185,7 +181,7 @@ const Jobs = () => {
           </ListItem>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
@@ -197,7 +193,7 @@ const Jobs = () => {
                 </Box>
               }
               secondary={
-                <Box sx={style.listText}>
+                <Box sx={style.listText} component="span">
                   <FormattedMessage
                     id="Job.CrossKnowledge.KeyAchievement3.FEDetails"
                     defaultMessage="Frontend: Backbone.JS, HTML5, CSS3, gulp, responsive emails"
@@ -213,7 +209,7 @@ const Jobs = () => {
           </ListItem>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
@@ -276,19 +272,19 @@ const Jobs = () => {
         <List sx={style.list}>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
                 <Box sx={style.listText}>
                   <FormattedMessage
                     id="Job.AirFrance.KeyAchievement1"
-                    defaultMessage="Technical migration of Air France's salon management application"
+                    defaultMessage="Migrated Air France's salon management application to newest technical stack"
                   />
                 </Box>
               }
               secondary={
-                <Box sx={style.listText}>
+                <Box sx={style.listText} component="span">
                   <FormattedMessage
                     id="Job.AirFrance.KeyAchievement1.Details"
                     defaultMessage="Migration from Java 4 to Java 7, Tomcat 7 migration"
@@ -301,19 +297,19 @@ const Jobs = () => {
           </ListItem>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
                 <Box sx={style.listText}>
                   <FormattedMessage
                     id="Job.AirFrance.KeyAchievement2"
-                    defaultMessage="Database optimization"
+                    defaultMessage="Optimized database performances"
                   />
                 </Box>
               }
               secondary={
-                <Box sx={style.listText}>
+                <Box sx={style.listText} component="span">
                   <FormattedMessage
                     id="Job.AirFrance.KeyAchievement2.Details1"
                     defaultMessage="Index purge & optimization"
@@ -329,14 +325,14 @@ const Jobs = () => {
           </ListItem>
           <ListItem sx={style.listItem}>
             <ListItemIcon sx={style.listItemIcon}>
-              <ArrowForwardIosIcon sx={style.bullet} />
+              <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>
             <ListItemText
               primary={
                 <Box sx={style.listText}>
                   <FormattedMessage
                     id="Job.AirFrance.KeyAchievement3"
-                    defaultMessage="Migration study of a Java Swing heavy client application to a web client"
+                    defaultMessage="Estimated and planned migration of a Java Swing heavy client application to a web client"
                   />
                 </Box>
               }
@@ -345,7 +341,7 @@ const Jobs = () => {
         </List>
       </Stack>
 
-      <Stack direction="column" gap={1} display="none">
+      {/* <Stack direction="column" gap={1} display="none">
         <JobTitle
           titles={[
             intl.formatMessage({
@@ -385,7 +381,7 @@ const Jobs = () => {
           id="Job.Description.OverLink"
           defaultMessage="Participated in the complete overhaul of the company's customer ticket management ERP, migrating from WinDev to a C# .NET desktop application."
         />
-      </Stack>
+      </Stack> */}
     </Stack>
   )
 }

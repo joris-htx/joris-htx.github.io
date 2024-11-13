@@ -1,6 +1,6 @@
-import { Paper } from '@mui/material'
+import { Paper, useTheme } from '@mui/material'
 
-import style from './style'
+import useStyle from './style'
 import Header from '../Header'
 
 type Props = {
@@ -8,6 +8,9 @@ type Props = {
 }
 
 const Layout = ({ children }: Props) => {
+  const theme = useTheme()
+  const style = useStyle(theme)
+
   return (
     <Header>
       <Paper elevation={1} sx={style.layout}>

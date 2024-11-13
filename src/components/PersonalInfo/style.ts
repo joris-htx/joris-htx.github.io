@@ -14,6 +14,7 @@ const useStyle = (theme: Theme) =>
       writingMode: 'vertical-lr',
       textOrientation: 'upright',
       textAlign: 'center',
+      zIndex: 1,
 
       [theme.breakpoints.up('md')]: {
         display: 'none',
@@ -27,18 +28,13 @@ const useStyle = (theme: Theme) =>
       display: 'none',
 
       [theme.breakpoints.up('md')]: {
-        display: 'flex',
-        flexDirection: 'column',
-        borderRadius: '5px',
-        p: 2,
+        display: 'block',
       },
 
       '@media print': {
-        display: 'flex',
-        flexDirection: 'column',
+        display: 'block',
         p: 0,
         maxWidth: 200,
-        borderRight: 'solid 1px #D7D7D7',
       },
     },
   }) satisfies SxProps

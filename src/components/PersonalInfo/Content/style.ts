@@ -1,56 +1,53 @@
-import { SxProps } from '@mui/material'
-import { grey } from '@mui/material/colors'
+import { SxProps, Theme } from '@mui/material'
 
-const useStyle = {
-  contentWrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    borderRadius: '5px',
-    height: '100%',
-    p: 2,
-    bgcolor: 'lightgrey',
-  },
-  avatar: {
-    width: 150,
-    height: 150,
-    border: 'solid 2px blue',
+const useStyle = (theme: Theme) =>
+  ({
+    contentWrapper: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      borderRadius: '5px',
+      borderTopRightRadius: 0,
+      height: '100%',
+      p: 2,
+      paddingBottom: 0,
+      backgroundColor: '#C9CDD4',
+    },
+    avatar: {
+      maxWidth: 200,
+      maxHeight: 200,
+      width: '100%',
+      height: 'auto',
+      border: `solid 2px ${theme.palette.secondary.main}`,
+    },
+    section: {
+      width: '100%',
+    },
+    icon: {
+      '@media print': {
+        fontSize: 12,
+      },
+    },
+    svgIcon: {
+      width: 20,
 
-    '@media print': {
-      width: 100,
-      height: 100,
+      '@media print': {
+        width: 16,
+      },
     },
-  },
-  section: {
-    width: '100%',
-  },
-  icon: {
-    '@media print': {
-      fontSize: 12,
+    link: {
+      textDecoration: 'none',
     },
-  },
-  svgIcon: {
-    width: 20,
-
-    '@media print': {
-      width: 16,
+    iconLink: {
+      '@media print': {
+        display: 'none',
+      },
     },
-  },
-  link: {
-    textDecoration: 'none',
-  },
-  iconLink: {
-    color: grey[600],
-
-    '@media print': {
-      display: 'none',
+    marginTopOnPrint: {
+      '@media print': {
+        marginTop: 6,
+      },
     },
-  },
-  marginTopOnPrint: {
-    '@media print': {
-      marginTop: 4,
-    },
-  },
-} satisfies SxProps
+  }) satisfies SxProps
 
 export default useStyle

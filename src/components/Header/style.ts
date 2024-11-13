@@ -65,7 +65,7 @@ const style = (theme: Theme) =>
       },
 
       '& .MuiSwitch-thumb': {
-        backgroundColor: '#001e3c',
+        backgroundColor: theme.palette.secondary.main,
         width: 28,
         height: 28,
       },

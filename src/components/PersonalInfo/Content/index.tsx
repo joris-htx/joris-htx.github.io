@@ -7,13 +7,13 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew'
 import PhoneIcon from '@mui/icons-material/Phone'
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf'
 import SpaIcon from '@mui/icons-material/Spa'
-import { Avatar, Box, Link, Stack } from '@mui/material'
+import { Avatar, Box, Link, Stack, Typography, useTheme } from '@mui/material'
 import { FormattedMessage, useIntl } from 'react-intl'
 
 import JavascriptIcon from './resources/javascript.svg'
 import PSMIcon from './resources/psm1.svg'
 import ReactIcon from './resources/react.svg'
-import style from './style'
+import useStyle from './style'
 import FranceFlagIcon from '../../../shared-resources/france-flag-icon.svg'
 import UnitedKingdomFlagIcon from '../../../shared-resources/united-kingdom-flag-icon.svg'
 import IconItem from '../../IconItem'
@@ -21,15 +21,17 @@ import RankingBar from '../../RankingBar'
 
 const Content = () => {
   const intl = useIntl()
+  const theme = useTheme()
+  const style = useStyle(theme)
 
   return (
     <Box sx={style.contentWrapper}>
-      <Avatar alt="Joris Harnetiaux" src="resources/Lavender-Waves.jpeg" style={style.avatar} />
+      <Avatar alt="Joris Harnetiaux" src="resources/avatar.jpg" style={style.avatar} />
 
       <Box component="section" sx={style.section}>
-        <Box component="h3">
+        <Typography variant="h6" marginTop={2} marginBottom={1}>
           <FormattedMessage id="PersonalInfo.Contact" defaultMessage="Contact" />
-        </Box>
+        </Typography>
 
         <Stack direction="column" gap={1}>
           <IconItem
@@ -62,12 +64,12 @@ const Content = () => {
       </Box>
 
       <Box component="section" sx={style.section}>
-        <Box component="h3">
+        <Typography variant="h6" marginTop={2} marginBottom={1}>
           <FormattedMessage
             id="PersonalInfo.Trainings"
             defaultMessage="Trainings & certifications"
           />
-        </Box>
+        </Typography>
 
         <Stack direction="column" gap={1}>
           <Stack direction="row" gap={1} alignItems="center" justifyContent="space-between">
@@ -106,9 +108,9 @@ const Content = () => {
       </Box>
 
       <Box component="section" sx={style.section}>
-        <Box component="h3">
+        <Typography variant="h6" marginTop={2} marginBottom={1}>
           <FormattedMessage id="PersonalInfo.Languages" defaultMessage="Languages" />
-        </Box>
+        </Typography>
 
         <Stack direction="column" gap={1}>
           <RankingBar iconSrc={UnitedKingdomFlagIcon} value={95} />
@@ -117,13 +119,13 @@ const Content = () => {
       </Box>
 
       <Box component="section" sx={style.section}>
-        <Box component="h3">
+        <Typography variant="h6" marginTop={2} marginBottom={1}>
           <FormattedMessage id="PersonalInfo.Skills" defaultMessage="Skills" />
-        </Box>
+        </Typography>
 
-        <Box component="h5">
+        <Typography variant="subtitle2" marginTop={2} marginBottom={1}>
           <FormattedMessage id="PersonalInfo.Skills.SoftSkills" defaultMessage="Soft skills" />
-        </Box>
+        </Typography>
 
         <Stack direction="column" gap={1}>
           <RankingBar title="Scrum, Agile" value={75} />
@@ -136,12 +138,12 @@ const Content = () => {
           />
         </Stack>
 
-        <Box component="h5">
+        <Typography variant="subtitle2" marginTop={2} marginBottom={1}>
           <FormattedMessage
             id="PersonalInfo.Skills.ProgrammingLanguages"
             defaultMessage="Programming languages"
           />
-        </Box>
+        </Typography>
         <Stack direction="column" gap={1}>
           <RankingBar title="HTML5" value={95} />
           <RankingBar title="JS, NodeJS" value={90} />
@@ -149,20 +151,20 @@ const Content = () => {
           <RankingBar title="CSS, SASS" value={90} />
         </Stack>
 
-        <Box component="h5">
+        <Typography variant="subtitle2" marginTop={2} marginBottom={1}>
           <FormattedMessage
             id="PersonalInfo.Skills.Frameworks"
             defaultMessage="Frameworks & libraries"
           />
-        </Box>
+        </Typography>
         <Stack direction="column" gap={1}>
           <RankingBar title="React" value={90} />
           <RankingBar title="NextJS" value={80} />
         </Stack>
 
-        <Box component="h5">
+        <Typography variant="subtitle2" marginTop={2} marginBottom={1} sx={style.marginTopOnPrint}>
           <FormattedMessage id="PersonalInfo.Skills.Tools" defaultMessage="Tools & technologies" />
-        </Box>
+        </Typography>
         <Stack direction="column" gap={1}>
           <RankingBar title="Material UI" value={85} />
           <RankingBar title="React query" value={80} />
@@ -170,17 +172,17 @@ const Content = () => {
           <RankingBar title="Yarn, NPM" value={70} />
         </Stack>
 
-        <Box component="h5">
+        <Typography variant="subtitle2" marginTop={2} marginBottom={1}>
           <FormattedMessage id="PersonalInfo.Skills.Testing" defaultMessage="Testing" />
-        </Box>
+        </Typography>
         <Stack direction="column" gap={1}>
           <RankingBar title="Jest, RTL" value={85} />
           <RankingBar title="Cypress" value={66} />
         </Stack>
 
-        <Box component="h5" sx={style.marginTopOnPrint}>
+        <Typography variant="subtitle2" marginTop={2} marginBottom={1}>
           <FormattedMessage id="PersonalInfo.Skills.Design" defaultMessage="Design tools" />
-        </Box>
+        </Typography>
         <Stack direction="column" gap={1}>
           <RankingBar title="Figma" value={50} />
           <RankingBar
@@ -194,9 +196,9 @@ const Content = () => {
       </Box>
 
       <Box component="section" sx={style.section}>
-        <Box component="h3">
+        <Typography variant="h6" marginTop={2} marginBottom={1}>
           <FormattedMessage id="PersonalInfo.Hobbies" defaultMessage="Hobbies" />
-        </Box>
+        </Typography>
 
         <Stack direction="column" gap={1}>
           <IconItem
