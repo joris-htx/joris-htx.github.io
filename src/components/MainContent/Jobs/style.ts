@@ -39,6 +39,11 @@ const style = (theme: Theme) =>
         fontSize: 12,
       },
     },
+    marginTop: {
+      '@media print': {
+        marginTop: 7,
+      },
+    },
   }) satisfies SxProps
 
 export default style

@@ -15,7 +15,7 @@ const useStyle = (theme: Theme) =>
 
       '@media print': {
         marginLeft: 0,
-        paddingBottom: 3,
+        paddingBottom: 5,
       },
     },
     wave: {
@@ -61,8 +61,8 @@ const useStyle = (theme: Theme) =>
       },
     },
     waveCurve: {
+      display: 'none',
       content: '""',
-      display: 'block',
       position: 'absolute',
       backgroundColor: 'transparent',
       bottom: -50,
@@ -72,6 +72,14 @@ const useStyle = (theme: Theme) =>
       borderTopLeftRadius: 25,
       boxShadow: '-11px -25px 0 10px #C9CDD4',
       zIndex: 0,
+
+      [theme.breakpoints.up('md')]: {
+        display: 'block',
+      },
+
+      '@media print': {
+        display: 'block',
+      },
     },
     title: {
       alignItems: 'center',

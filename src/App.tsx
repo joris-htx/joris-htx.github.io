@@ -1,5 +1,4 @@
 import { Box, ThemeProvider } from '@mui/material'
-import React from 'react'
 import { IntlProvider } from 'react-intl'
 
 import CV from './components/CV'
@@ -15,7 +14,7 @@ const App = () => {
   const locale = useLocale()
 
   return (
-    <Box sx={{ background: '#E5E5E5' }}>
+    <Box sx={{ background: '#E5E5E5', '@media print': { background: '#FFFFFF' } }}>
       <IntlProvider
         messages={locale === 'fr' ? messagesInFrench : messagesInEnglish}
         locale={locale}

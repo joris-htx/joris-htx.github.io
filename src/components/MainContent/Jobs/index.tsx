@@ -12,10 +12,12 @@ import {
 import { FormattedMessage, useIntl } from 'react-intl'
 
 import useStyle from './style'
+import { useLocale } from '../../../hooks'
 import JobTitle from '../../JobTitle'
 
 const Jobs = () => {
   const intl = useIntl()
+  const locale = useLocale()
   const theme = useTheme()
   const style = useStyle(theme)
 
@@ -188,7 +190,7 @@ const Jobs = () => {
               }
             />
           </ListItem>
-          <ListItem sx={style.listItem}>
+          <ListItem sx={[style.listItem, locale === 'en' && style.marginTop]}>
             <ListItemIcon sx={style.listItemIcon}>
               <ArrowForwardIosIcon sx={style.bullet} color="secondary" />
             </ListItemIcon>

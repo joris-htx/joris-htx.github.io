@@ -108,6 +108,7 @@ const Header = ({ children }: Props) => {
             >
               <MenuIcon />
             </IconButton>
+            <Box component="img" src="resources/logo.png" alt="logo" width={70} marginRight={1} />
             <Typography variant="h6" component="div" sx={style.toolbarLogo}>
               Joris
               <br />
